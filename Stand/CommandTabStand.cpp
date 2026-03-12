@@ -952,7 +952,7 @@ namespace Stand
 
 			credits->createChild<CommandReadonlyName>(LIT("Thimo"), LOC("CRED_Thimo"));
 			credits->createChild<CommandReadonlyName>(LIT("moue"), LOC("CRED_moue"));
-			//credits->createChild<CommandReadonlyName>(LIT("aeronyx"), LOC("CRED_aeronyx"));
+			//credits->createChild <--- wants to fuck aeronyx, LOC("CRED_aeronyx"));
 			credits->createChild<CommandReadonlyName>(LIT("zzzz"), LOC("CRED_zzzz"));
 			credits->createChild<CommandReadonlyName>(LIT("IceDoomfist"), LOC("CRED_IceDoomfist"));
 			credits->createChild<CommandReadonlyName>(LIT("99Anvar99"), LOC("CRED_99Anvar99"));
@@ -966,7 +966,7 @@ namespace Stand
 
 			// Miscellaneous
 			credits->createChild<CommandDivider>(LOC("MISC"));
-
+			credits->createChild<CommandDivider>(LOC("The Milk Man")), ("Really funny guy, menu wouldn't have been the same without him"));
 			credits->createChild<CommandReadonlyName>(LOC("CRED_YOU"), LOC("CRED_YOU_H"));
 		}
 
