@@ -324,14 +324,15 @@ public:
 	PAD(0x0968 + sizeof(CVehicleFlags), 0x0A54) float m_fHomingProjectileDistance; // 0F 2E 05 ? ? ? ? 74 05 0F 2F C8 - CVehicle::SetHomingProjectileDistance
 	PAD(0x0A54 + 4, 0x0AEE) bool m_bAllowHomingMissleLockOnSynced;
 	PAD(0x0AEE + 1, 0x0C28) VehicleType vehicle_type;
-	PAD(0x0C18 + 4, 0x0C20) CWheel** wheels;
-	/* 0x0C28 */ int32_t num_wheels;
-	PAD(0x0C28 + 4, 0x0C38) CCarDoor* m_pDoors;
-	/* 0x0C40 */ int32_t m_nNumDoors;
-	PAD(0x0C40 + 4, 0x0C70) CVehicleWeaponMgr* m_pVehicleWeaponMgr;
+	PAD(0x0C28 + 4, 0x0C30) CWheel** wheels;
+	/* 0x0C38 */ int32_t num_wheels;
+	PAD(0x0C38 + 4, 0x0C48) CCarDoor* m_pDoors;
+	/* 0x0C50 */ int32_t m_nNumDoors;
+	PAD(0x0C50 + 4, 0x0C70) CVehicleWeaponMgr* m_pVehicleWeaponMgr;
 	PAD(0x0C70 + 8, 0x0C80) rage::atArray<CVehicleGadget*> m_pVehicleGadgets;
-	/* 0x0C38 */ float m_fVerticalVelocityToKnockOffThisBike;
-	/* 0x0C3C */ float m_fGravityForWheelIntegrator;
+	PAD(0x0C80 + sizeof(rage::atArray<CVehicleGadget*>), 0x0C98) float m_fVerticalVelocityToKnockOffThisBike;
+	/* 0x0C9C */ float m_fGravityForWheelIntegrator;
+
 
 	[[nodiscard]] bool InheritsFromHeli() const noexcept;
 
