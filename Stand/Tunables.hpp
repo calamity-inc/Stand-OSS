@@ -19,10 +19,10 @@ namespace Stand
 	{
 		Tunables();
 
+		mutable Spinlock mtx;
 		soup::Promise<> ready;
 		bool downloading = false;
 		int64_t version = 0;
-		mutable Spinlock mtx;
 		std::string latest_natives_version = "3407a";
 
 		std::vector<std::string> c_module_whitelist{};
